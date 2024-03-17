@@ -1,2 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿DataGeneric<String> data = new DataGeneric<string>("1302223134");
+data.PrintData();
+
+class DataGeneric<T>
+{
+    readonly T data;
+
+    public DataGeneric(T data)
+    {
+        this.data = data;
+    }
+
+    public void PrintData()
+    {
+        Console.WriteLine("Data yang tersimpan adalah: " + data);
+    }
+}
